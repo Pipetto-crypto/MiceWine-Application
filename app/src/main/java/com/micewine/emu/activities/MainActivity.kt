@@ -1036,7 +1036,7 @@ class MainActivity : AppCompatActivity() {
                 val wineUtils = File("$appRootDir/wine-utils")
                 val startMenu = File("$driveC/ProgramData/Microsoft/Windows/Start Menu")
                 val userSharedFolder = File("/storage/emulated/0/MiceWine")
-                val localAppData = File("$driveC/users/$unixUsername/AppData")
+                var localAppData = File("$driveC/users/$unixUsername/AppData")
                 val system32 = File("$driveC/windows/system32")
                 val syswow64 = File("$driveC/windows/syswow64")
                 val winePrefixConfigFile = File("$winePrefix/config")
