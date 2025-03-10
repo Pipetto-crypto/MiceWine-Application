@@ -150,5 +150,8 @@ object EnvVars {
         }
 
         vars.add("WINEESYNC=$wineESync")
+        /* For Proton, first one not really necessary but better to have it on */
+        vars.add("WINE_DISABLE_FULLSCREEN_HACK=1")
+        vars.add("WINE_DISABLE_KERNEL_WRITEWATCH=1")
     }
 }
