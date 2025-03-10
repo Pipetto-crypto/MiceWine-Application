@@ -1046,7 +1046,7 @@ class MainActivity : AppCompatActivity() {
 
                 selectedWine = wine
 
-                WineWrapper.wine("wineboot -i")
+                WineWrapper.wine("wineboot -u")
 
                 File("$appRootDir/wine-utils/CoreFonts").copyRecursively(File("$winePrefix/drive_c/windows/Fonts"), true)
 
