@@ -1050,6 +1050,10 @@ class MainActivity : AppCompatActivity() {
 
                 File("$appRootDir/wine-utils/CoreFonts").copyRecursively(File("$winePrefix/drive_c/windows/Fonts"), true)
 
+                /* It's safe to assume that if this folder doesn't exist we are using Proton */
+                if (!localAppData.exists())
+                    localAppData = File("$driveC/users/steamuser/AppData")
+
                 localAppData.copyRecursively(File("$userSharedFolder/AppData"))
                 localAppData.deleteRecursively()
 
